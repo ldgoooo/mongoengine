@@ -1182,7 +1182,7 @@ class BaseQuerySet(object):
 
         pipeline = initial_pipeline + list(pipeline)
 
-        return self._collection.aggregate(pipeline, cursor={}, **kwargs)
+        return self._collection.aggregate(pipeline, **kwargs)
 
     # JS functionality
     def map_reduce(self, map_f, reduce_f, output, finalize_f=None, limit=None,
